@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Évaluez votre maturité en cybersécurité avec le framework OpenSec R.331 – pratique, conforme aux standards et adapté à toute organisation.">
+<meta name="keywords" content="jeremy-rousseau, cybersécurité, auto-évaluation, ISO27001, NIS2, audit de sécurité, OpenSec, R.331, framework, maturité, conformité, bonnes pratiques de sécurité">
+<meta property="og:title" content="Framework OpenSec R.331 – Outil d’auto-évaluation en cybersécurité" />
+<meta property="og:description" content="Un framework pratique pour mesurer et améliorer la posture cybersécurité de votre organisation. Inspiré de l’expérience terrain et des meilleurs standards." />
+<meta property="og:image" content="https://opensec-framework.org/assets/preview-opensec.png" />
+<meta property="og:url" content="https://opensec-framework.org/fr" />
+<meta name="twitter:card" content="summary_large_image" />
+<title>🔒 Cybersécurité – Framework R.331</title>
+<link rel="icon" href="/favicon.png" type="image/png">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <h1>🔒 Cybersécurité – Framework R.331</h1>
+  <form id="auditForm">
+<div id="intro" style="max-width:800px; margin:auto; text-align:center; margin-top:10px; margin-bottom:30px;">
+
+<p>
+Cet outil d’évaluation est conçu pour aider les organisations à mesurer la mise en œuvre des principales bonnes pratiques de sécurité.<br>
+Plutôt qu’une simple liste de conformité, il propose un guide pratique fondé sur l’expérience terrain pour identifier les points forts et les axes d’amélioration de votre système d’information.<br>
+Basé sur des retours concrets et aligné sur les standards de sécurité internationalement reconnus, ce framework convient à toutes les organisations, quelle que soit leur taille, leur secteur ou leur niveau de maturité.<br>
+</p>
+<p>Vous pouvez enregistrer votre progression à tout moment et recharger un fichier JSON sauvegardé précédemment pour poursuivre votre évaluation.</p>
+
+</div>
+    <div id="questionsContainer"></div>
+
+    <div class="actions">
+      <button type="button" onclick="saveAnswers()">Sauvegarder & Consulter</button>
+      <input type="file" id="fileInput" style="display:none" onchange="loadAnswers(event)">
+      <button type="button" onclick="document.getElementById('fileInput').click()">Charger la sauvegarde .JSON</button>
+	  <button onclick="window.print()">Exporter en PDF</button>
+    </div>
+  </form>
+  <div id="charts">
+    <canvas id="gaugeChart" style="margin-top:40px;"></canvas>
+    <canvas id="complianceChart"></canvas>
+    <canvas id="categoryChart"></canvas>
+	<canvas id="radarChart" width="400" height="400"></canvas>
+  </div>
+  <div id="recommendationsContainer" style="max-width:800px; margin:auto; margin-top:40px;"></div>
+<a href="https://opensec-framework.org" id="lang-switch" title="Switch to English version">
+  <img src="https://flagcdn.com/w20/gb.png" alt="English" width="20" height="14" />
+</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- OpenSec R.331 developed by https://www.linkedin.com/in/jeremy-rousseau-cybersecurite-nantes/ - https://opensec-framework.org -->
